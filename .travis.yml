@@ -3,10 +3,8 @@ node_js:
 - '0.11'
 env:
   global:
-  - secure: qIiQrcxYQIivmQ1eYAdppB1a8nCrcK3f6DhN+lL29Wv+WgJuibtzBk7+z6B7axuJE4Eq7sbtKBllpl/OWl/JmkkVouk8DH3qYoxX4cgNH/iqjCs52M9uG2bFg/08Im+DrTsckgSNuso04eDUhkEtw/TW7zSgz6fbWITr7CY145c=
-  - secure: o4id5lH+J1F/XgbaUJ+jvX0YE0j0naKn42rvNv32Ns1xIVXDO/pT9cGNoisYicT8NF5FrtvVjeQ2p6Uzo8DSOG+8ft3NYSKfo1pk49TmTA5CQ8zOJTCi/uJlUzcWP2X3Jnp3e7ltBE2AupnLiaQnimtt7CJHDtcxWgEc+a5Afqc=
-  - secure: ZoKUumgHZv8cnFo5A39d9bZMWzoDkHBz7qkdhD4cytbaoDx21lKI5HI3XduotEAE2QLZgbDF7y6wDWqHMMOCb0Oo+1O+ZyfwzXo4csC5O26T81aGyo+aikKFoj9hbfO1L8WHLG6f7O+6RwgJzdQtD0yJxFX+24I3jQRH2bNmsWw=
-  - secure: l5w1QfPaC2Dum25nosGx1SielMiWD5LDWVzaWLEJM0fYshjwC46TgVRFOdD4RBfUW8t9xodXdDV6ZxuCl3o+nNRA5yOyaJrfEBI5mZbB73wq2uuq11kJzth/+bBNZ7DkKHI/NHuS09p1axP0JJjdiqIXtnOcaEroAwBIIpOG9AQ=
+  - secure: lXasZW1eEAGVZcXkSGBgVeJOyBJoKt8RX4kANJbvOIOSsw3PutpSRO5xyhFjcFObXIqVnmHIj6wuvPV5RWRe9D93XfmKm69HCXal5xpIn1x+nmY3tZpc4fthuKbPW8jsIl63x6w0fs+1drX3+mu5U45qIYoQF+YBKpUV2C/yIOw=
+  - secure: Xz8RS1U6erMFa86q1ekXQ1h+B1TnCBBMqe2JB2dLsWS2FbJv7LAdbD6d58xozO6b0q1h1E+uvI+wKi/5mlnTJb9obiapLgwtdTK6vqf9M4Cd4xr/cdLqxN2qYaq9j5nc8dHNBoCWuRX1Kb8mj79nyRPOXOoIZ+8hd/uLHncZJ70=
 addons:
   sauce_connect: true
 before_script:
