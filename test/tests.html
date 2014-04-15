@@ -11,6 +11,7 @@
     <script src="lib/jquery.js"></script>
     <script src="lib/chai.js"></script>
     <script src="lib/mocha.js"></script>
+    <script src="../node_modules/mocha-sauce/client.js"></script>
     <script>
         mocha.setup('bdd');
         expect = chai.expect;
@@ -19,10 +20,6 @@
     <script src='../SessionStore.js'></script>
     <script src='specs/sessionStore.js'></script>
 
-    <script>
-        mocha.checkLeaks();
-        mocha.globals(['jQuery']);
-        mocha.run();
-    </script>
+    <script>mochaSaucePlease()</script>
 </body>
 </html>
