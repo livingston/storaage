@@ -2,10 +2,10 @@ var MochaSauce = require("../node_modules/mocha-sauce/index.js");
 
 // configure
 var sauce = new MochaSauce({
-    name: "SessionStore", // your project name
-
-    // the test url
-    url: "http://localhost:8080/test" // point to the site running your mocha tests
+    name: "SessionStore",
+    host: "localhost",
+    port: 4445,
+    url: "http://localhost:8080/test"
 });
 
 
