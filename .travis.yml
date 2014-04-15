@@ -5,3 +5,8 @@ env:
   global:
   - secure: qIiQrcxYQIivmQ1eYAdppB1a8nCrcK3f6DhN+lL29Wv+WgJuibtzBk7+z6B7axuJE4Eq7sbtKBllpl/OWl/JmkkVouk8DH3qYoxX4cgNH/iqjCs52M9uG2bFg/08Im+DrTsckgSNuso04eDUhkEtw/TW7zSgz6fbWITr7CY145c=
   - secure: o4id5lH+J1F/XgbaUJ+jvX0YE0j0naKn42rvNv32Ns1xIVXDO/pT9cGNoisYicT8NF5FrtvVjeQ2p6Uzo8DSOG+8ft3NYSKfo1pk49TmTA5CQ8zOJTCi/uJlUzcWP2X3Jnp3e7ltBE2AupnLiaQnimtt7CJHDtcxWgEc+a5Afqc=
+addons:
+  sauce_connect: true
+before_script:
+  - npm install gulp -g
+  - gulp serve

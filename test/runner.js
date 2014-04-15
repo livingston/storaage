@@ -5,7 +5,7 @@ var sauce = new MochaSauce({
     name: "SessionStore", // your project name
 
     // the test url
-    url: "http://localhost/test" // point to the site running your mocha tests
+    url: "http://localhost:8080/test" // point to the site running your mocha tests
 });
 
 
