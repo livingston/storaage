@@ -6,6 +6,7 @@ var sauce = new MochaSauce({
     host: "localhost",
     port: 4445,
     url: "http://localhost:8080/test"
+    build: process.env.TRAVIS_JOB_ID
 });
 
 
