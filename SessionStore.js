@@ -3,7 +3,8 @@
     var SessionStore = function (namespace, data) {
         this.ns = namespace;
 
-        this.data = data;
+        if (data)
+            this.data = data;
     };
 
     Object.defineProperties(SessionStore.prototype, {
