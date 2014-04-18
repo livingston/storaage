@@ -8,8 +8,7 @@ gulp.task('serve', function(){
               .use(connect.logger('dev'))
               .use(connect.static(buildPath));
 
-  http.createServer(app).listen(8080);
+  http.createServer(app).listen(4000);
 });
 
-// gulp.task('build', ['clean', 'templates', 'es6', 'styles']);
-// gulp.task('default', ['build', 'watch', 'serve', 'open']);
+gulp.task('default', ['serve']);

@@ -6,7 +6,7 @@ var sauce = new MochaSauce({
     username: 'sessionstore',
     host: "localhost",
     port: 4445,
-    url: "http://localhost:8080/test/index.html",
+    url: "http://localhost:4000/test/index.html",
     build: process.env.TRAVIS_JOB_ID
 });
 
