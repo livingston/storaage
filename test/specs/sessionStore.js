@@ -39,4 +39,25 @@ describe('SessionStore', function () {
 
     expect(JSON.parse(sessionStorage.getItem('sessionstore'))).to.eql({ test: 123 });
   });
+
+  it('retrives the individual property from data', function () {
+    var store = new SessionStore('testing', { storage: ['session', 'local'] });
+
+    expect(store.getItem('storage')).to.eql(['session', 'local']);
+  });
+
+  it('sets the individual property to data', function () {
+    var store = new SessionStore('testing', { storage: ['session', 'local'] });
+
+    store.setItem('storage', 'IndexedDB');
+
+    expect(store.getItem('storage')).to.eql('IndexedDB');
+  });
+
+  it('data should be unique among instances', function () {
+    var store1 =  new SessionStore('sessionstore', { version: '1.0.0' });
+    var store2 =  new SessionStore('sessionstore', { version: '2.0.0' });
+
+    expect(store1.data).to.not.eql(store2.data);
+  })
 });
