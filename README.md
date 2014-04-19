@@ -1,4 +1,4 @@
-SessionStore [![Build Status](https://travis-ci.org/livingston/SessionStore.svg?branch=master)](https://travis-ci.org/livingston/SessionStore) ![Dependencies Status](https://david-dm.org/livingston/SessionStore.png)
+SessionStore [![Build Status](https://travis-ci.org/livingston/storaage.svg?branch=master)](https://travis-ci.org/livingston/storaage) ![Dependencies Status](https://david-dm.org/livingston/storaage.png)
 ============
 
 Better Interface for sessionStorage
