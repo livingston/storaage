@@ -32,4 +32,11 @@ describe('SessionStore', function () {
 
     expect(JSON.parse(sessionStorage.getItem('sessionstore'))).to.eql({ test: '1234' });
   });
+
+  it('to not overwrite data in sessionStorage', function () {
+    window.sessionStorage.setItem('sessionstore', '{ "test": 123 }');
+    var store = new SessionStore('sessionstore');
+
+    expect(JSON.parse(sessionStorage.getItem('sessionstore'))).to.eql({ test: 123 });
+  });
 });
