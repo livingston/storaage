@@ -54,10 +54,17 @@ describe('SessionStore', function () {
     expect(store.getItem('storage')).to.eql('IndexedDB');
   });
 
-  it('data should be unique among instances', function () {
+  it('data should be identical among instances using the same namespace', function () {
     var store1 =  new SessionStore('sessionstore', { version: '1.0.0' });
     var store2 =  new SessionStore('sessionstore', { version: '2.0.0' });
 
-    expect(store1.data).to.not.eql(store2.data);
+    expect(store1.data).to.eql(store2.data);
   })
+
+  it('data should be unique among instances with different namespace', function () {
+    var store1 =  new SessionStore('sessionstore', { version: '1.0.0' });
+    var store2 =  new SessionStore('sessionstore2', { version: '2.0.0' });
+
+    expect(store1.data).to.not.eql(store2.data);
+  });
 });
