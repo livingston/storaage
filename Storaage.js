@@ -1,13 +1,13 @@
 (function (global) {
     'use strict';
-    var SessionStore = function (namespace, data) {
+    var Storaage = function (namespace, data) {
         this.ns = namespace;
 
         if (data)
             this.data = data;
     };
 
-    Object.defineProperties(SessionStore.prototype, {
+    Object.defineProperties(Storaage.prototype, {
         data: {
             get: function () {
                 return JSON.parse(window.sessionStorage.getItem(this.ns));
@@ -31,5 +31,5 @@
         }
     });
 
-    global.SessionStore = SessionStore;
+    global.Storaage = Storaage;
 }(window));
