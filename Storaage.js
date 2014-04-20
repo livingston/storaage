@@ -1,8 +1,11 @@
 (function (global) {
     'use strict';
+
     var Storaage = function (namespace, data, persist) {
+        var storage = persist ? 'localStorage' : 'sessionStorage';
+
         this.ns = namespace;
-        this.storage = persist ? 'localStorage' : 'sessionStorage';
+        this.storage = global[storage];
 
         Object.freeze(this);
 
@@ -13,10 +16,10 @@
     Object.defineProperties(Storaage.prototype, {
         data: {
             get: function () {
-                return JSON.parse(global[this.storage].getItem(this.ns));
+                return JSON.parse(this.storage.getItem(this.ns));
             },
             set: function (data) {
-                global[this.storage].setItem(this.ns, JSON.stringify(data || {}));
+                this.storage.setItem(this.ns, JSON.stringify(data || {}));
             }
         },
         getItem: {
