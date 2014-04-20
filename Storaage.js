@@ -1,7 +1,10 @@
 (function (global) {
     'use strict';
-    var Storaage = function (namespace, data) {
+    var Storaage = function (namespace, data, persist) {
         this.ns = namespace;
+        this.storage = persist ? 'localStorage' : 'sessionStorage';
+
+        Object.freeze(this);
 
         if (data)
             this.data = data;
@@ -10,10 +13,10 @@
     Object.defineProperties(Storaage.prototype, {
         data: {
             get: function () {
-                return JSON.parse(window.sessionStorage.getItem(this.ns));
+                return JSON.parse(global[this.storage].getItem(this.ns));
             },
             set: function (data) {
-                window.sessionStorage.setItem(this.ns, JSON.stringify(data || {}));
+                global[this.storage].setItem(this.ns, JSON.stringify(data || {}));
             }
         },
         getItem: {
