@@ -32,16 +32,16 @@ describe('Storaage', function () {
     it('to select the right storage', function () {
       var store = new Storaage('sessionstore', {}, false);
 
-      expect(store.storage).to.equal('sessionStorage');
-      expect(store.storage).to.not.equal('localStorage');
+      expect(store.storage).to.equal(window.sessionStorage);
+      expect(store.storage).to.not.equal(window.localStorage);
     });
 
     it('to not modify the storage property', function () {
       var store = new Storaage('sessionstore', {}, false);
 
-      store.storage = 'randomstore';
+      store.storage = {};
 
-      expect(store.storage).to.equal('sessionStorage');
+      expect(store.storage).to.equal(window.sessionStorage);
     });
 
     it('to store data passed in as argument, in sessionStorage', function () {
