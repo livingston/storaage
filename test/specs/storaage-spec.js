@@ -13,6 +13,15 @@ describe('Storaage', function () {
       expect(store.ns).to.equal('sessionstore');
     });
 
+    it('to not modify the namespace property', function () {
+      var store = new Storaage('sessions');
+
+      store.ns = 'random';
+
+      expect(store.ns).to.equal('sessions');
+    });
+
+
     it('to set data property', function () {
       var store = new Storaage('sessionstore', { version: '1.0.0' });
 
