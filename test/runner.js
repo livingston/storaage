@@ -2,8 +2,8 @@ var MochaSauce = require("../node_modules/mocha-sauce/index.js");
 
 // configure
 var sauce = new MochaSauce({
-    name: "SessionStore",
-    username: 'sessionstore',
+    name: "storaage",
+    username: 'storaage',
     host: "localhost",
     port: 4445,
     url: "http://localhost:4000/test/index.html",

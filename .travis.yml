@@ -1,19 +1,14 @@
 language: node_js
-
 node_js:
-  - '0.11'
-
+- '0.11'
 env:
   global:
-  - secure: DJRiVn5fJrIp5z47tsBRAzwHRX5Omqfrgv1dhTkee7HRkarlCezt7ZeWEUQjYVCNYAGXMV4HDPgxj9kyTIy97sAgK0eaGWfMHQcfZmJqTqJj5dJSlx5JusB3rRNGoroeiTaNRHU2zs1E0bZHuqn3+BKnecBWv+dIejCjCy92q/0=
-  - secure: WJ4RtqeTehYu75R/+gE4qXGA+SUpaFuxtpYMTSDpVJxRlA69NzmwKJiDqMpC75rB7Iv/UOfzo8lMeJv/nRHv65lvFxbmSbFAprsJg1oTgxEVAoDJWGwYBx/WO8YPnI+lQJDc2oUdKgSfk6ac9Cz9bwHkoVkuk0AwXq/M5Cmxhz0=
-
+  - secure: mPth+220yvtXmWjf2RoXbz095+TiqAWEMalIJMD7qgPsQ2OQrTCSs6dEroPkGrUSEzdS294D6n15hPkMjtynbqBe6fpzXtwvYF9jHV/e/4bvQTzhmLDVbVQNevgyutp9cWYxthVaEoEeABgfer7b8Dj2qiVzBKVTQIZh0O7gOqQ=
+  - secure: b7qJLVnocvWcJfxFdTFXp5h53s5FWGndMRCFw6lugxNqWwUUzcomq/E0SrtpmQCAFAsK9UnfsYS4xYR+pMxuzof9cNYkUk7aFijI23oew8caZE6eYoEXMXCqWm/6XfUFN281mlqVS805wjsX6K0HSWTgduu1DuUJPIFRFq6jJHw=
 addons:
   sauce_connect: true
-
 install:
-  - npm install gulp -g
-  - npm install
-
+- npm install gulp -g
+- npm install
 before_script:
-  - gulp serve &
+- gulp serve &
