@@ -6,6 +6,11 @@ describe('Storaage', function () {
       done();
     });
 
+    xit('to fail when no namespace is passed', function() {
+      expect(new Storaage).to.throw(Error);
+      chai.assert.throws(new Storaage, Error, 'Undefined namespace')
+    });
+
     it('to set the namespace property', function() {
       var store = new Storaage('sessionstore');
 
@@ -33,6 +38,19 @@ describe('Storaage', function () {
       store.setItem('storage', 'IndexedDB');
 
       expect(store.getItem('storage')).to.eql('IndexedDB');
+    });
+
+    it('to set storage as sessionStorage only one argument is passed', function () {
+      var store = new Storaage('sessionstore');
+
+      expect(store.storage).to.equal(window.sessionStorage);
+      expect(store.storage).to.not.equal(window.localStorage);
+    });
+
+    it('to set localStorage as storage when `true` is passed as 2nd argument', function () {
+      var store = new Storaage('testing', true);
+
+      expect(store.storage).to.equal(window.localStorage);
     });
   });
 

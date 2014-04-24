@@ -1,8 +1,25 @@
 (function (global) {
     'use strict';
 
-    var Storaage = function (namespace, data, persist) {
-        var storage = persist ? 'localStorage' : 'sessionStorage';
+    var isBoolean = function (value) {
+        return (value === true || value === false ||
+                value && typeof value == 'object' && value.toString() == '[object Boolean]') || false;
+    };
+
+    var Storaage = function (namespace, dataOrPersist, persist) {
+        var storage, data;
+
+        if(!namespace || !namespace.toString().trim()) {
+            throw Error('Undefined namespace');
+        }
+
+        if (isBoolean(dataOrPersist)) {
+            persist = dataOrPersist;
+        } else {
+            data = dataOrPersist;
+        }
+
+        storage = persist ? 'localStorage' : 'sessionStorage';
 
         this.ns = namespace;
         this.storage = global[storage];
