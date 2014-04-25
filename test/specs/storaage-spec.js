@@ -6,9 +6,10 @@ describe('Storaage', function () {
       done();
     });
 
-    xit('to fail when no namespace is passed', function() {
-      expect(new Storaage).to.throw(Error);
-      chai.assert.throws(new Storaage, Error, 'Undefined namespace')
+    it('to fail when namespace is not passed', function() {
+      var createStorage = function () { new Storaage() };
+
+      expect(createStorage).to.throw(Error);
     });
 
     it('to set the namespace property', function() {

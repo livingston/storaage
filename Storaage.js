@@ -10,7 +10,7 @@
         var storage, data;
 
         if(!namespace || !namespace.toString().trim()) {
-            throw Error('Undefined namespace');
+            throw new Error('Undefined namespace');
         }
 
         if (isBoolean(dataOrPersist)) {
