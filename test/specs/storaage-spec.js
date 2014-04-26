@@ -6,10 +6,18 @@ describe('Storaage', function () {
       done();
     });
 
-    it('to fail when namespace is not passed', function() {
-      var createStorage = function () { new Storaage() };
+    it('to create a namespace when no namespace is provided', function() {
+      var store = new Storaage;
 
-      expect(createStorage).to.throw(Error);
+      expect(store).to.have.property('ns');
+      expect(store.ns).to.match(/^storaage-\d{13,}$/);
+    });
+
+    it('two instances without user specified namespace should have unique namespaces', function() {
+      var store1 = new Storaage;
+      var store2 = new Storaage;
+
+      expect(store1.ns).to.not.equal(store2.ns);
     });
 
     it('to set the namespace property', function() {
