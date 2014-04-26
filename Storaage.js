@@ -1,6 +1,8 @@
 (function (global) {
     'use strict';
 
+    var storaageInstanceIndex = 0;
+
     var isBoolean = function (value) {
         return (value === true || value === false ||
                 value && typeof value == 'object' && value.toString() == '[object Boolean]') || false;
@@ -10,7 +12,7 @@
         var storage, data;
 
         if(!namespace || !namespace.toString().trim()) {
-            throw new Error('Undefined namespace');
+            namespace = 'storaage-' + Date.now() + ++storaageInstanceIndex
         }
 
         if (isBoolean(dataOrPersist)) {
