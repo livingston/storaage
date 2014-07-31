@@ -17,8 +17,11 @@
   },
   "homepage": "https://github.com/livingston/SessionStore",
   "devDependencies": {
-    "mocha-sauce": "git://github.com/pbakaus/mocha-sauce.git",
     "connect": "^2.14.4",
-    "gulp": "^3.6.0"
+    "gulp": "^3.6.0",
+    "gulp-mocha-phantomjs": "^0.3.0"
+  },
+  "dependencies": {
+
   }
 }
