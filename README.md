@@ -1,4 +1,4 @@
-storaage [![Build Status](https://travis-ci.org/livingston/storaage.svg?branch=master)](https://travis-ci.org/livingston/storaage) ![Dependencies Status](https://david-dm.org/livingston/storaage.png)
+storaage [![Build Status](https://snap-ci.com/livingston/storaage/branch/master/build_image)](https://snap-ci.com/livingston/storaage/branch/master) ![Dependencies Status](https://david-dm.org/livingston/storaage.png)
 ============
 
 Better Interface for localStorage and sessionStorage
