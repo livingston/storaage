@@ -1,4 +1,4 @@
-storaage [![Build Status](https://snap-ci.com/livingston/storaage/branch/master/build_image)](https://snap-ci.com/livingston/storaage/branch/master)
+storaage [![Build Status](https://snap-ci.com/livingston/storaage/branch/master/build_image)](https://snap-ci.com/livingston/storaage/branch/master) [![Code Climate](https://codeclimate.com/github/livingston/storaage/badges/gpa.svg)](https://codeclimate.com/github/livingston/storaage)
 ============
 
 Better Interface for localStorage and sessionStorage
